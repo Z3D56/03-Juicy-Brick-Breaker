@@ -1,12 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://cppfl0adnrhdi"]
 
-[ext_resource path="res://Powerups/Payload_Grow.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://Powerups/Payload_Grow.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://b2xc4nkxl2h4d" path="res://Paddle/payload_sprite.tscn" id="2_1owyk"]
 
 [node name="Payload_Grow" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
 one_shot = true
+
+[node name="Payload Sprite" parent="Timer" instance=ExtResource("2_1owyk")]
+position = Vector2(49, 13)
+scale = Vector2(0.5, 0.5)
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

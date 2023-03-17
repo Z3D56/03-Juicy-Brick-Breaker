@@ -13,7 +13,7 @@ func _physics_process(_delta):
 		make_ball()
 
 func make_ball():
-	var ball = Ball.instance()
+	var ball = Ball.instantiate()
 	ball.global_position = Vector2(Global.VP.x/2, Global.VP.y - 110)
 	var direction = Vector2(250,-250) if randf() > 0.5 else Vector2(-250,-250)
 	ball.initial_velocity = direction
@@ -22,7 +22,7 @@ func make_ball():
 	
 
 func make_ball_fever():
-	var ball = Ball.instance()
+	var ball = Ball.instantiate()
 	ball.global_position = Vector2(randf() * (Global.VP.x - 50) + 50, Global.VP.y - 110)
 	var direction = Vector2(250,-250) if randf() > 0.5 else Vector2(-250,-250)
 	ball.apply_central_impulse(direction)

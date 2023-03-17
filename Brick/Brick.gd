@@ -20,7 +20,7 @@ func hit(_ball):
 func die():
 	dying = true
 	collision_layer = 0
-	$ColorRect.hide()
+	$Brick.hide()
 	Global.update_score(score)
 	if not Global.feverish:
 		Global.update_fever(score)
@@ -29,6 +29,6 @@ func die():
 		var Powerup_Container = get_node_or_null("/root/Game/Powerup_Container")
 		if Powerup_Container != null:
 			var Powerup = load("res://Powerups/Powerup.tscn")
-			var powerup = Powerup.instance()
+			var powerup = Powerup.instantiate()
 			powerup.position = position
 			Powerup_Container.call_deferred("add_child", powerup)

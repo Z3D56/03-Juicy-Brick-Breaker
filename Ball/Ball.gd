@@ -11,7 +11,7 @@ var initial_velocity = Vector2.ZERO
 
 func _ready():
 	contact_monitor = true
-	contacts_reported = 8
+	max_contacts_reported = 8
 	if Global.level < 0 or Global.level >= len(Levels.levels):
 		Global.end_game(true)
 	else:
@@ -49,7 +49,7 @@ func _integrate_forces(state):
 		state.linear_velocity = state.linear_velocity.normalized() * max_speed * speed_multiplier
 
 func change_size(s):
-	$ColorRect.rect_scale = s
+	$ColorRect.scale = s
 	$CollisionShape2D.scale = s
 
 func change_speed(s):

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7rgiiak6g4me"]
+
+[ext_resource type="Script" path="res://Brick.gd" id="1_4qxnn"]
+[ext_resource type="Texture2D" uid="uid://dskd6l1rju70f" path="res://Assets/Waffle.png" id="2_fs1wd"]
+
+[node name="Brick" type="StaticBody2D"]
+script = ExtResource("1_4qxnn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_fs1wd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.25, 0.25)
+polygon = PackedVector2Array(169, -94, 169, -92.3, 176, -89.3, 176, -87.8, 194, -69.8, 194, -67.6, 203, -53.6, 203, -50.4, 207, -40.4, 207, 65, 205.4, 65, 200.4, 80, 198.9, 80, 188.9, 91, 186.4, 91, 175.4, 96, -157.3, 96, -168, 92.4, -168, 91.3, -179, 86.3, -179, 84.9, -194, 71.9, -194, 69.7, -202, 59.7, -202, 56.4, -207, 45.4, -207, -64.4, -201.4, -79, -200, -79, -193, -88, -190.7, -88, -182.7, -94, -179.1, -94, -177, -94.5, -177, -96)

@@ -25,4 +25,4 @@ func _physics_process(_delta):
 func _on_Powerup_body_entered(body):
 	if body.name == "Paddle":
 		if payload != null:
-			body.powerup(payload.instance())
+			body.powerup(payload.instantiate())

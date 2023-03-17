@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2xc4nkxl2h4d"]
+
+[ext_resource type="Texture2D" uid="uid://dnaywjsiraqtf" path="res://Assets/13.png" id="1_ldrjs"]
+[ext_resource type="Texture2D" uid="uid://d1lfctuedt2nh" path="res://Assets/7.png" id="2_am8ur"]
+[ext_resource type="Texture2D" uid="uid://chslgl2tj8til" path="res://Assets/1.png" id="3_6j7nf"]
+[ext_resource type="Texture2D" uid="uid://drgbx08vs410f" path="res://Assets/2_1 COPY.png" id="3_ljhoa"]
+[ext_resource type="Texture2D" uid="uid://dn5x3npr53d5q" path="res://Assets/5.png" id="4_7dbnp"]
+
+[node name="Payload Sprite" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ldrjs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(109, 0)
+texture = ExtResource("2_am8ur")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-65.25, 14.25)
+scale = Vector2(1.19492, 0.633333)
+texture = ExtResource("3_6j7nf")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(35.25, 16)
+scale = Vector2(0.76087, 0.727273)
+texture = ExtResource("4_7dbnp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-81, 27)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_ljhoa")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-47, 27)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_ljhoa")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(23, 26)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_ljhoa")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(60, 26)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_ljhoa")

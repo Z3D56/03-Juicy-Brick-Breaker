@@ -1,0 +1,13 @@
+res://default_env.tres
+res://Ball/Ball.tscn
+res://Paddle/Paddle.tscn
+res://UI/Main_Menu.tscn
+res://Paddle/Paddle.gd
+res://Powerups/Payload_Grow.tscn
+res://Paddle/payload_sprite.tscn
+res://Brick/Glacier.tscn
+res://Brick/Honey.tscn
+res://Brick/Moon.tscn
+res://Brick/Brick.tscn
+res://Brick/Brick.gd
+res://Game.gd

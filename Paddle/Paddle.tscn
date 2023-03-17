@@ -1,19 +1,94 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=18 format=3 uid="uid://dn1vkhcsxnjyb"]
 
-[ext_resource path="res://Paddle/Paddle.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://Paddle/Paddle.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://g8eireqijfgq" path="res://Assets/Explosion_1.png" id="2_3t3lu"]
+[ext_resource type="Texture2D" uid="uid://cdbrrd3mxi0mh" path="res://Assets/Explosion_2.png" id="3_1b1t1"]
+[ext_resource type="Texture2D" uid="uid://hwxvtp40iax3" path="res://Assets/Explosion_3.png" id="4_ho20h"]
+[ext_resource type="Texture2D" uid="uid://gbi6e7shmrah" path="res://Assets/Explosion_4.png" id="5_utumj"]
+[ext_resource type="Texture2D" uid="uid://deeuguoj0m5ay" path="res://Assets/Explosion_5.png" id="6_kly3h"]
+[ext_resource type="Texture2D" uid="uid://cnan4d42l3dfc" path="res://Assets/Explosion_6.png" id="7_0mx3k"]
+[ext_resource type="Texture2D" uid="uid://cu8vh77f2javh" path="res://Assets/Explosion_7.png" id="8_2i23m"]
+[ext_resource type="Texture2D" uid="uid://cwe8ir37afwi2" path="res://Assets/Explosion_8.png" id="9_ymj6b"]
+[ext_resource type="Texture2D" uid="uid://c0nwsa1fpp75h" path="res://Assets/Explosion_9.png" id="10_lupi4"]
+[ext_resource type="Texture2D" uid="uid://d2cve0cbqvuyv" path="res://Assets/Explosion_10.png" id="11_lqpey"]
+[ext_resource type="Texture2D" uid="uid://cpvdftmta1o1p" path="res://Assets/2.png" id="12_2iumh"]
+[ext_resource type="Texture2D" uid="uid://cenp0h1lii3th" path="res://Assets/4.png" id="13_0houx"]
+[ext_resource type="Texture2D" uid="uid://c8yeanxs0tj2i" path="res://Assets/17.png" id="14_sx17w"]
+[ext_resource type="Texture2D" uid="uid://dqwidmmohcdeo" path="res://Assets/Taxi.png" id="15_ass8o"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 50, 10 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(69, 10)
 
-[node name="Paddle" type="KinematicBody2D"]
-script = ExtResource( 1 )
+[sub_resource type="SpriteFrames" id="SpriteFrames_jnbu7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3t3lu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1b1t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ho20h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_utumj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kly3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0mx3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2i23m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ymj6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lupi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lqpey")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 100.0
-margin_bottom = 20.0
+[node name="Paddle" type="CharacterBody2D"]
+script = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 50, 10 )
-shape = SubResource( 1 )
+position = Vector2(50.5, 6)
+shape = SubResource("1")
 
 [node name="Powerups" type="Node2D" parent="."]
+
+[node name="Image" type="Node2D" parent="."]
+
+[node name="Exhaust" type="AnimatedSprite2D" parent="Image"]
+position = Vector2(-7, 35)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_jnbu7")
+frame = 9
+frame_progress = 0.841936
+
+[node name="Sprite2D" type="Sprite2D" parent="Image"]
+position = Vector2(53, 26)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("12_2iumh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Image/Sprite2D"]
+position = Vector2(-3.52941, 28.2353)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("13_0houx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Image/Sprite2D"]
+position = Vector2(-37.6471, -1.17647)
+texture = ExtResource("14_sx17w")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Image/Sprite2D"]
+position = Vector2(36.4706, -34.1176)
+texture = ExtResource("15_ass8o")
