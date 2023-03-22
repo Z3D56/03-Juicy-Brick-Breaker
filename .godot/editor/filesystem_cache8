@@ -1,7 +1,8 @@
 2a60927148abd1d33b818b535e306557
-::res://::1679012568
-default_env.tres::Environment::4952708507404422767::1679012568::0::1::::<><>::
-Game.gd::GDScript::-1::1679006135::0::1::::<>Node2D<>::
+::res://::1679520521
+Brick.gd::GDScript::-1::1679013765::0::1::::<>StaticBody2D<>::
+default_env.tres::Environment::4952708507404422767::1679014998::0::1::::<><>::
+Game.gd::GDScript::-1::1679014998::0::1::::<>Node2D<>::
 Game.tscn::PackedScene::-1::1679006135::0::1::::<><>::res://Brick/Brick_Container.gd<>res://Paddle/Paddle.tscn<>res://Ball/Ball_Container.gd<>res://Game.gd<>res://UI/Pause_Menu.tscn<>res://Wall/Wall.gd<>res://UI/HUD.tscn<>res://UI/Instructions.tscn<>res://Effects/Fever.gd
 Global.gd::GDScript::-1::1679006135::0::1::::<>Node<>::
 icon.png::CompressedTexture2D::8521209659453514361::1679004392::1679006153::1::::<><>::
@@ -52,11 +53,16 @@ Waffle.png::CompressedTexture2D::8443543143400854567::1679008369::1679008753::1:
 Ball.gd::GDScript::-1::1679006135::0::1::::<>RigidBody2D<>::
 Ball.tscn::PackedScene::7405004172513090558::1679011835::0::1::::<><>::res://Ball/Ball.gd<>uid://b3t5u8ahlp1v3
 Ball_Container.gd::GDScript::-1::1679006135::0::1::::<>Node2D<>::
-::res://Brick/::1679012568
-Brick.gd::GDScript::-1::1679006135::0::1::::<>StaticBody2D<>::
-Brick.tscn::PackedScene::-1::1679006135::0::1::::<><>::res://Brick/Brick.gd
+::res://Brick/::1679014998
+Brick.gd::GDScript::-1::1679014160::0::1::::<>StaticBody2D<>::
+Brick.tscn::PackedScene::8480363660410129339::1679014998::0::1::::<><>::res://Brick/Brick.gd
 Brick_Container.gd::GDScript::-1::1679006135::0::1::::<>Node2D<>::
-Rectangle 1.tscn::PackedScene::2414091918641411505::1679012568::0::1::::<><>::
+Glacier.tscn::PackedScene::2414091918641411505::1679013511::0::1::::<><>::res://Brick/Brick.gd<>uid://dc6i4xtpi1nls
+Honey.tscn::PackedScene::8551467025458072379::1679013561::0::1::::<><>::uid://d2exo5jppju3d<>res://Brick/Brick.gd
+Moon.tscn::PackedScene::4394038828676577869::1679013655::0::1::::<><>::uid://cp6wc83hqttv1<>res://Brick/Brick.gd
+Purple.tscn::PackedScene::2934529607357296303::1679013733::0::1::::<><>::res://Brick/Brick.gd<>uid://b5c05uhbfol3h
+Soap.tscn::PackedScene::4929703711289013127::1679013771::0::1::::<><>::res://Brick.gd<>uid://bx27d7y0qvv10
+Waffle.tscn::PackedScene::7054357794612944112::1679013817::0::1::::<><>::res://Brick.gd<>uid://dskd6l1rju70f
 ::res://Effects/::1679004392
 Fever.gd::GDScript::-1::1679006135::0::1::::<>Node2D<>::
 ::res://Paddle/::1679012306
