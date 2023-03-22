@@ -8,7 +8,7 @@ bg_color = Color( 1, 1, 1, 1 )
 [sub_resource type="StyleBoxEmpty" id=2]
 
 [node name="HUD" type="Control"]
-pause_mode = 2
+process_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -17,28 +17,28 @@ script = ExtResource( 1 )
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -29.0
+offset_top = -29.0
 color = Color( 0, 0, 0, 0.25098 )
 
 [node name="Background2" type="ColorRect" parent="."]
 anchor_right = 1.0
-margin_top = 10.0
-margin_bottom = 50.0
+offset_top = 10.0
+offset_bottom = 50.0
 color = Color( 0, 0, 0, 0.25098 )
 
 [node name="Score" type="Label" parent="."]
-margin_left = 20.0
-margin_right = 220.0
-margin_bottom = 60.0
+offset_left = 20.0
+offset_right = 220.0
+offset_bottom = 60.0
 text = "Score: "
 valign = 1
 
 [node name="Time" type="Label" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -220.0
-margin_right = -20.0
-margin_bottom = 60.0
+offset_left = -220.0
+offset_right = -20.0
+offset_bottom = 60.0
 text = "Time: "
 align = 2
 valign = 1
@@ -46,11 +46,11 @@ valign = 1
 [node name="Fever" type="ProgressBar" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -200.0
-margin_top = 20.0
-margin_right = 200.0
-margin_bottom = 45.0
-rect_min_size = Vector2( 400, 25 )
+offset_left = -200.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 45.0
+custom_minimum_size = Vector2( 400, 25 )
 custom_styles/fg = SubResource( 1 )
 custom_styles/bg = SubResource( 2 )
 percent_visible = false

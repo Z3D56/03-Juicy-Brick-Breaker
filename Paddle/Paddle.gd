@@ -1,7 +1,7 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 var target = Vector2.ZERO
-export var speed = 10.0
+@export var speed = 10.0
 var width = 0
 var width_default = 0
 var decay = 0.02
@@ -18,7 +18,9 @@ func _physics_process(_delta):
 		c.payload()
 
 func _input(event):
+	$Exhaust.hide()
 	if event is InputEventMouseMotion:
+		$Exhaust.show()
 		target.x += event.relative.x
 
 func hit(_ball):

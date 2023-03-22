@@ -13,14 +13,14 @@ var fever_decay = 0.1
 var feverish = false
 
 
-export var default_starting_in = 4
-export var default_lives = 5
+@export var default_starting_in = 4
+@export var default_lives = 5
 
 func _ready():
-	pause_mode = Node.PAUSE_MODE_PROCESS
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	randomize()
 	VP = get_viewport().size
-	var _signal = get_tree().get_root().connect("size_changed",self,"_resize")
+	var _signal = get_tree().get_root().connect("size_changed",Callable(self,"_resize"))
 	reset()
 
 func _physics_process(_delta):
@@ -92,10 +92,10 @@ func update_time(t):
 func next_level():
 	level += 1
 	fever = 0
-	var _scene = get_tree().change_scene("res://Game.tscn")
+	var _scene = get_tree().change_scene_to_file("res://Game.tscn")
 
 func end_game(success):
 	if success:
-		var _scene = get_tree().change_scene("res://UI/End_Game.tscn")
+		var _scene = get_tree().change_scene_to_file("res://UI/End_Game.tscn")
 	else:
-		var _scene = get_tree().change_scene("res://UI/End_Game.tscn")
+		var _scene = get_tree().change_scene_to_file("res://UI/End_Game.tscn")
