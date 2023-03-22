@@ -8,7 +8,7 @@ extents = Vector2( 45, 15 )
 [node name="Brick" type="StaticBody2D"]
 script = ExtResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Brick" type="ColorRect" parent="."]
 margin_left = -45.0
 margin_top = -15.0
 margin_right = 45.0

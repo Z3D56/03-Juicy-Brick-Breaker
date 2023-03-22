@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Honey.png" type="Texture" id=1]
+[ext_resource path="res://Brick/Brick.gd" type="Script" id=2]
+
+[node name="Brick" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 0.25, 0.25 )
+polygon = PoolVector2Array( 174, -89, 174, -87.4, 190, -81.4, 190, -79.7, 202, -65.7, 202, -62, 204, 61, 202.5, 61, 200.6, 69, 199, 69, 190, 81, 187.5, 81, 172.5, 89, -172.4, 89, -191, 80.3, -191, 78.9, -197, 73.9, -197, 71.5, -204, 59.5, -204, -61, -202.5, -61, -199.5, -71, -197.9, -71, -188.9, -82, -186.5, -82, -172.5, -89, 103, -89, 103, -90 )

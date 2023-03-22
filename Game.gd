@@ -13,10 +13,29 @@ func _ready():
 		var Brick_Container = get_node_or_null("/root/Game/Brick_Container")
 		Global.time = level["timer"]
 		if Brick_Container != null:
-			var Brick = load("res://Brick/Brick.tscn")
+			var Bricks = [load("res://Brick/Waffle.tscn")
+			, load("res://Brick/Glacier.tscn")
+			, load("res://Brick/Honey.tscn")
+			, load("res://Brick/Moon.tscn")
+			, load("res://Brick/Purple.tscn")
+			, load("res://Brick/Soap.tscn")
+			]
+			var Brick = null
 			for rows in range(len(layout)):
 				for cols in range(len(layout[rows])):
 					if layout[rows][cols] > 0:
+						if layout[rows][cols] > 10:
+							Brick = Bricks[0]
+						if layout[rows][cols] > 20:
+							Brick = Bricks[1]
+						if layout[rows][cols] > 30:
+							Brick = Bricks[2]
+						if layout[rows][cols] > 40:
+							Brick = Bricks[3]
+						if layout[rows][cols] > 50:
+							Brick = Bricks[4]
+						else:
+							Brick = Bricks[5]
 						var brick = Brick.instance()
 						brick.new_position = Vector2(margin.x + index.x*cols, margin.y + index.y*rows)
 						brick.position = Vector2(brick.new_position.x,-100)
