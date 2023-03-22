@@ -29,6 +29,6 @@ func die():
 		var Powerup_Container = get_node_or_null("/root/Game/Powerup_Container")
 		if Powerup_Container != null:
 			var Powerup = load("res://Powerups/Powerup.tscn")
-			var powerup = Powerup.instantiate()
+			var powerup = Powerup.instance()
 			powerup.position = position
 			Powerup_Container.call_deferred("add_child", powerup)
