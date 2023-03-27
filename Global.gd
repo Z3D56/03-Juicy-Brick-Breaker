@@ -13,14 +13,14 @@ var fever_decay = 0.1
 var feverish = false
 
 
-@export var default_starting_in = 4
-@export var default_lives = 5
+export var default_starting_in = 4
+export var default_lives = 5
 
 func _ready():
-	process_mode = Node.PROCESS_MODE_ALWAYS
+	pause_mode = Node.PAUSE_MODE_PROCESS
 	randomize()
 	VP = get_viewport().size
-	var _signal = get_tree().get_root().connect("size_changed",Callable(self,"_resize"))
+	var _signal = get_tree().get_root().connect("size_changed",self,"_resize")
 	reset()
 
 func _physics_process(_delta):

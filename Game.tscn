@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Brick/Brick_Container.gd" type="Script" id=1]
 [ext_resource path="res://Paddle/Paddle.tscn" type="PackedScene" id=2]
@@ -9,15 +9,21 @@
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/Instructions.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Effects/Fever.gd" type="Script" id=9]
+[ext_resource path="res://Assets/BG.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Wall_hit.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Bounce.wav" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Shake.wav" type="AudioStream" id=13]
+[ext_resource path="res://Comet_Container.gd" type="Script" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
-size = Vector2( 100, 500 )
 
 [sub_resource type="RectangleShape2D" id=2]
-size = Vector2( 612, 100 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="Comet_Container" type="Node2D" parent="."]
+script = ExtResource( 14 )
 
 [node name="Wall_Container" type="Node2D" parent="."]
 
@@ -25,10 +31,6 @@ script = ExtResource( 4 )
 script = ExtResource( 6 )
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Left"]
-offset_left = -190.0
-offset_top = -100.0
-offset_right = 10.0
-offset_bottom = 900.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Left"]
 position = Vector2( -90, 400 )
@@ -39,10 +41,6 @@ position = Vector2( 1024, 0 )
 script = ExtResource( 6 )
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Right"]
-offset_left = -10.0
-offset_top = -100.0
-offset_right = 190.0
-offset_bottom = 900.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Right"]
 position = Vector2( 90, 400 )
@@ -52,10 +50,6 @@ shape = SubResource( 1 )
 script = ExtResource( 6 )
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Top"]
-offset_left = -100.0
-offset_top = -190.0
-offset_right = 1124.0
-offset_bottom = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Top"]
 position = Vector2( 512, -90 )
@@ -82,13 +76,26 @@ script = ExtResource( 9 )
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="UI" instance=ExtResource( 7 )]
-process_mode = 0
 visible = false
 
 [node name="Pause_Menu" parent="UI" instance=ExtResource( 5 )]
 visible = false
 
 [node name="Instructions" parent="UI" instance=ExtResource( 8 )]
-process_mode = 2
+visible = false
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 402 )
+scale = Vector2( 0.4, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="Bounce" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="Shake" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+
+[node name="Wall_Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
 
 [connection signal="timeout" from="Fever/Timer" to="Fever" method="_on_Timer_timeout"]

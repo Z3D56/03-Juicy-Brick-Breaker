@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://UI/Main_Menu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Wall_hit.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Bounce.wav" type="AudioStream" id=3]
 
 [node name="Main_Menu" type="Control"]
 anchor_right = 1.0
@@ -41,6 +43,12 @@ margin_top = 50.0
 margin_right = 100.0
 margin_bottom = 90.0
 text = "Quit"
+
+[node name="Bounce" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Wall_Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
