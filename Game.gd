@@ -24,15 +24,15 @@ func _ready():
 			for rows in range(len(layout)):
 				for cols in range(len(layout[rows])):
 					if layout[rows][cols] > 0:
-						if layout[rows][cols] > 10:
+						if layout[rows][cols] > 90:
 							Brick = Bricks[0]
-						if layout[rows][cols] > 20:
+						elif layout[rows][cols] > 80:
 							Brick = Bricks[1]
-						if layout[rows][cols] > 30:
+						elif layout[rows][cols] > 70:
 							Brick = Bricks[2]
-						if layout[rows][cols] > 40:
+						elif layout[rows][cols] > 60:
 							Brick = Bricks[3]
-						if layout[rows][cols] > 50:
+						elif layout[rows][cols] > 50:
 							Brick = Bricks[4]
 						else:
 							Brick = Bricks[5]

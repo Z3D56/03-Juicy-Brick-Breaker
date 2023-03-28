@@ -1,8 +1,7 @@
 extends Control
 
 func _ready():
-	get_tree().paused = true
-	
+	pass
 func set_instructions(n,i):
 	$Name.text = n
 	$Instructions.text = i
