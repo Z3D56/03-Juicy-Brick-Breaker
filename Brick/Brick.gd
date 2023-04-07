@@ -49,7 +49,7 @@ func die():
 	collision_mask = 0
 	Global.update_score(score)
 	get_parent().check_level()
-	#$Confetti.emitting = true
+	$Confetti.emitting = true
 	$Tween.interpolate_property(self, "position", position, Vector2(position.x, 1000), time_fall, Tween.TRANS_EXPO, Tween.EASE_IN)
 	$Tween.interpolate_property(self, "rotation", rotation, -PI + randf()*2*PI, time_rotate, Tween.TRANS_QUAD, Tween.EASE_IN_OUT)
 	$Tween.start()

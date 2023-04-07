@@ -15,3 +15,5 @@ scale = Vector2( 0.25, 0.25 )
 polygon = PoolVector2Array( 174, -80.8, 207, -48.8, 207, 55.8, 179.8, 83, -174.8, 83, -207, 49.8, -207, -55, -204.8, -55, -179.9, -81, -33, -81, 167, -82, 167, -83, 174, -83 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="Confetti" type="CPUParticles2D" parent="."]
