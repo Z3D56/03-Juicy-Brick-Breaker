@@ -11,9 +11,20 @@ Which features you included
 
 
 ## References
+- Atomic heart vending machine OTP
+- kenny.nl
+- Thegameart.org
 
+## Features
+- Animated Bricks
+- Animated Bricks When Hit
+- Sound Effects
+- Music
+- Brick Apperance
+- Particles to Bricks
+- Bricks Shake When Hit
+- Comet to Ball
+- Animated Exhaust
+- Background
 
-## Future Development
-
-
-## Created by
+## Created by Jason Balcazar
